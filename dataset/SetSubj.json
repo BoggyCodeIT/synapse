@@ -1,0 +1,917 @@
+{
+	"name": "SetSubj",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "SqlServer1",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "SqlServerTable",
+		"schema": [
+			{
+				"name": "acSubject",
+				"type": "varchar"
+			},
+			{
+				"name": "acBuyer",
+				"type": "char"
+			},
+			{
+				"name": "acSupplier",
+				"type": "char"
+			},
+			{
+				"name": "acBank",
+				"type": "char"
+			},
+			{
+				"name": "acMunicipality",
+				"type": "char"
+			},
+			{
+				"name": "acLocComm",
+				"type": "char"
+			},
+			{
+				"name": "acWarehouse",
+				"type": "char"
+			},
+			{
+				"name": "acWorker",
+				"type": "char"
+			},
+			{
+				"name": "acUser",
+				"type": "char"
+			},
+			{
+				"name": "acDept",
+				"type": "char"
+			},
+			{
+				"name": "acSchool",
+				"type": "char"
+			},
+			{
+				"name": "acInstitution",
+				"type": "char"
+			},
+			{
+				"name": "acName2",
+				"type": "varchar"
+			},
+			{
+				"name": "acAddress",
+				"type": "varchar"
+			},
+			{
+				"name": "acName3",
+				"type": "varchar"
+			},
+			{
+				"name": "acPost",
+				"type": "varchar"
+			},
+			{
+				"name": "acCountry",
+				"type": "varchar"
+			},
+			{
+				"name": "anKm",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "acVATCodePrefix",
+				"type": "varchar"
+			},
+			{
+				"name": "acCode",
+				"type": "char"
+			},
+			{
+				"name": "acRegion",
+				"type": "char"
+			},
+			{
+				"name": "acSuprCommune",
+				"type": "varchar"
+			},
+			{
+				"name": "acPhone",
+				"type": "char"
+			},
+			{
+				"name": "acFax",
+				"type": "char"
+			},
+			{
+				"name": "acSubUnit",
+				"type": "char"
+			},
+			{
+				"name": "acPriceRate",
+				"type": "char"
+			},
+			{
+				"name": "anDaysForPayment",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "acYearStatement",
+				"type": "char"
+			},
+			{
+				"name": "adDateState",
+				"type": "smalldatetime",
+				"precision": 16,
+				"scale": 0
+			},
+			{
+				"name": "acStatement",
+				"type": "char"
+			},
+			{
+				"name": "anLimit",
+				"type": "money",
+				"precision": 19,
+				"scale": 4
+			},
+			{
+				"name": "adDateLimit",
+				"type": "smalldatetime",
+				"precision": 16,
+				"scale": 0
+			},
+			{
+				"name": "anMaxDaysPayDelay",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "acSubjTypeSupp",
+				"type": "varchar"
+			},
+			{
+				"name": "acSubjTypeBuyer",
+				"type": "varchar"
+			},
+			{
+				"name": "acStockManage",
+				"type": "char"
+			},
+			{
+				"name": "acStockValue",
+				"type": "char"
+			},
+			{
+				"name": "acStockInMinus",
+				"type": "char"
+			},
+			{
+				"name": "adDateInvent",
+				"type": "smalldatetime",
+				"precision": 16,
+				"scale": 0
+			},
+			{
+				"name": "anClerk",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "anRebate",
+				"type": "decimal",
+				"precision": 8,
+				"scale": 4
+			},
+			{
+				"name": "acWayOfSale",
+				"type": "char"
+			},
+			{
+				"name": "acCurrency",
+				"type": "varchar"
+			},
+			{
+				"name": "acPriceCalcMethod",
+				"type": "char"
+			},
+			{
+				"name": "acPayMethod",
+				"type": "varchar"
+			},
+			{
+				"name": "acDelivery",
+				"type": "varchar"
+			},
+			{
+				"name": "acRegNo",
+				"type": "char"
+			},
+			{
+				"name": "acPayer",
+				"type": "varchar"
+			},
+			{
+				"name": "acActivityCode",
+				"type": "varchar"
+			},
+			{
+				"name": "acSeparSaleCalc",
+				"type": "char"
+			},
+			{
+				"name": "acSuppPriceCalcMet",
+				"type": "char"
+			},
+			{
+				"name": "anSuppDiscount",
+				"type": "decimal",
+				"precision": 19,
+				"scale": 6
+			},
+			{
+				"name": "acSuppSaleMet",
+				"type": "char"
+			},
+			{
+				"name": "acSuppYearStatement",
+				"type": "char"
+			},
+			{
+				"name": "adSuppDateSta",
+				"type": "smalldatetime",
+				"precision": 16,
+				"scale": 0
+			},
+			{
+				"name": "anSuppPayDays",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "acSuppPayMet",
+				"type": "varchar"
+			},
+			{
+				"name": "acSuppStatement",
+				"type": "varchar"
+			},
+			{
+				"name": "anSuppLimit",
+				"type": "money",
+				"precision": 19,
+				"scale": 4
+			},
+			{
+				"name": "adSuppDateLim",
+				"type": "smalldatetime",
+				"precision": 16,
+				"scale": 0
+			},
+			{
+				"name": "acSuppDelivery",
+				"type": "varchar"
+			},
+			{
+				"name": "acSuppCurr",
+				"type": "varchar"
+			},
+			{
+				"name": "anSuppClerk",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "acPayOrdPriorty",
+				"type": "char"
+			},
+			{
+				"name": "acSWIFTCode",
+				"type": "char"
+			},
+			{
+				"name": "acATWarehouse",
+				"type": "char"
+			},
+			{
+				"name": "acMunicipCode",
+				"type": "char"
+			},
+			{
+				"name": "acDispDoc",
+				"type": "char"
+			},
+			{
+				"name": "acSetOfInterestRates",
+				"type": "varchar"
+			},
+			{
+				"name": "acStockRetailValue",
+				"type": "char"
+			},
+			{
+				"name": "acParity",
+				"type": "varchar"
+			},
+			{
+				"name": "acParityPost",
+				"type": "varchar"
+			},
+			{
+				"name": "acSuppParity",
+				"type": "varchar"
+			},
+			{
+				"name": "acSuppParityPost",
+				"type": "varchar"
+			},
+			{
+				"name": "acFieldSA",
+				"type": "varchar"
+			},
+			{
+				"name": "acFieldSB",
+				"type": "varchar"
+			},
+			{
+				"name": "acFieldSC",
+				"type": "varchar"
+			},
+			{
+				"name": "acFieldSD",
+				"type": "varchar"
+			},
+			{
+				"name": "acFieldSE",
+				"type": "varchar"
+			},
+			{
+				"name": "acFieldSF",
+				"type": "varchar"
+			},
+			{
+				"name": "acFieldSG",
+				"type": "varchar"
+			},
+			{
+				"name": "acFieldSH",
+				"type": "varchar"
+			},
+			{
+				"name": "acFieldSI",
+				"type": "varchar"
+			},
+			{
+				"name": "acFieldSJ",
+				"type": "varchar"
+			},
+			{
+				"name": "anFieldNA",
+				"type": "decimal",
+				"precision": 19,
+				"scale": 6
+			},
+			{
+				"name": "anFieldNB",
+				"type": "decimal",
+				"precision": 19,
+				"scale": 6
+			},
+			{
+				"name": "anFieldNC",
+				"type": "decimal",
+				"precision": 19,
+				"scale": 6
+			},
+			{
+				"name": "anFieldND",
+				"type": "decimal",
+				"precision": 19,
+				"scale": 6
+			},
+			{
+				"name": "anFieldNE",
+				"type": "decimal",
+				"precision": 19,
+				"scale": 6
+			},
+			{
+				"name": "anFieldNF",
+				"type": "decimal",
+				"precision": 19,
+				"scale": 6
+			},
+			{
+				"name": "anFieldNG",
+				"type": "decimal",
+				"precision": 19,
+				"scale": 6
+			},
+			{
+				"name": "anFieldNH",
+				"type": "decimal",
+				"precision": 19,
+				"scale": 6
+			},
+			{
+				"name": "anFieldNI",
+				"type": "decimal",
+				"precision": 19,
+				"scale": 6
+			},
+			{
+				"name": "anFieldNJ",
+				"type": "decimal",
+				"precision": 19,
+				"scale": 6
+			},
+			{
+				"name": "adFieldDA",
+				"type": "datetime",
+				"precision": 23,
+				"scale": 3
+			},
+			{
+				"name": "adFieldDB",
+				"type": "datetime",
+				"precision": 23,
+				"scale": 3
+			},
+			{
+				"name": "adFieldDC",
+				"type": "datetime",
+				"precision": 23,
+				"scale": 3
+			},
+			{
+				"name": "adFieldDD",
+				"type": "datetime",
+				"precision": 23,
+				"scale": 3
+			},
+			{
+				"name": "acSKIS",
+				"type": "varchar"
+			},
+			{
+				"name": "acXMLDocType",
+				"type": "char"
+			},
+			{
+				"name": "acXMLDocCript",
+				"type": "char"
+			},
+			{
+				"name": "acXMLDocSign",
+				"type": "char"
+			},
+			{
+				"name": "acCreatePayOrd",
+				"type": "char"
+			},
+			{
+				"name": "acXMLGLNNo",
+				"type": "varchar"
+			},
+			{
+				"name": "acIntrstsBuyer",
+				"type": "char"
+			},
+			{
+				"name": "acIntrstsSupplier",
+				"type": "char"
+			},
+			{
+				"name": "acRSBAInDistrikt",
+				"type": "char"
+			},
+			{
+				"name": "acHTTPPath",
+				"type": "varchar"
+			},
+			{
+				"name": "acIBANprefix",
+				"type": "char"
+			},
+			{
+				"name": "acSuprDept",
+				"type": "varchar"
+			},
+			{
+				"name": "anSubjVar1",
+				"type": "decimal",
+				"precision": 19,
+				"scale": 6
+			},
+			{
+				"name": "anSubjVar2",
+				"type": "decimal",
+				"precision": 19,
+				"scale": 6
+			},
+			{
+				"name": "anSubjVar3",
+				"type": "decimal",
+				"precision": 19,
+				"scale": 6
+			},
+			{
+				"name": "anSubjVar4",
+				"type": "decimal",
+				"precision": 19,
+				"scale": 6
+			},
+			{
+				"name": "anSubjVar5",
+				"type": "decimal",
+				"precision": 19,
+				"scale": 6
+			},
+			{
+				"name": "anSubjVar6",
+				"type": "decimal",
+				"precision": 19,
+				"scale": 6
+			},
+			{
+				"name": "anSubjVar7",
+				"type": "decimal",
+				"precision": 19,
+				"scale": 6
+			},
+			{
+				"name": "anSubjVar8",
+				"type": "decimal",
+				"precision": 19,
+				"scale": 6
+			},
+			{
+				"name": "anSubjVar9",
+				"type": "decimal",
+				"precision": 19,
+				"scale": 6
+			},
+			{
+				"name": "anSubjVar10",
+				"type": "decimal",
+				"precision": 19,
+				"scale": 6
+			},
+			{
+				"name": "anLatitude",
+				"type": "decimal",
+				"precision": 19,
+				"scale": 14
+			},
+			{
+				"name": "anLongitude",
+				"type": "decimal",
+				"precision": 19,
+				"scale": 14
+			},
+			{
+				"name": "anMaxRebate",
+				"type": "decimal",
+				"precision": 8,
+				"scale": 4
+			},
+			{
+				"name": "acPerInv",
+				"type": "varchar"
+			},
+			{
+				"name": "acSuppPerInv",
+				"type": "varchar"
+			},
+			{
+				"name": "acActive",
+				"type": "char"
+			},
+			{
+				"name": "acActiveContacts",
+				"type": "char"
+			},
+			{
+				"name": "acDeptRegNo",
+				"type": "varchar"
+			},
+			{
+				"name": "acPayLoc",
+				"type": "char"
+			},
+			{
+				"name": "acBuyerLimitCtrl",
+				"type": "char"
+			},
+			{
+				"name": "acSubUnitCode",
+				"type": "char"
+			},
+			{
+				"name": "acJIBCode",
+				"type": "varchar"
+			},
+			{
+				"name": "adTimeIns",
+				"type": "datetime",
+				"precision": 23,
+				"scale": 3
+			},
+			{
+				"name": "anUserIns",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "adTimeChg",
+				"type": "datetime",
+				"precision": 23,
+				"scale": 3
+			},
+			{
+				"name": "anUserChg",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "acNote",
+				"type": "varchar"
+			},
+			{
+				"name": "acPIN",
+				"type": "varchar"
+			},
+			{
+				"name": "acDeptMuni",
+				"type": "varchar"
+			},
+			{
+				"name": "anContactPrsnB",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "anContactPrsnS",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "acSubUnitRegNo",
+				"type": "char"
+			},
+			{
+				"name": "acSubUnitTaxCode",
+				"type": "varchar"
+			},
+			{
+				"name": "anWorkingHours",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "anWorkingDaysInWeek",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "acBudgetUser",
+				"type": "char"
+			},
+			{
+				"name": "acExciseNumber",
+				"type": "varchar"
+			},
+			{
+				"name": "anInstalmentNo",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "anSuppInstalmentNo",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "acBranch",
+				"type": "char"
+			},
+			{
+				"name": "acBranchForm",
+				"type": "char"
+			},
+			{
+				"name": "anOrgColor",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "acLoyaltyPrefix",
+				"type": "char"
+			},
+			{
+				"name": "acDontSendReminders",
+				"type": "char"
+			},
+			{
+				"name": "acGLN",
+				"type": "char"
+			},
+			{
+				"name": "acMunicipCreditor",
+				"type": "varchar"
+			},
+			{
+				"name": "acBankCode",
+				"type": "char"
+			},
+			{
+				"name": "anQId",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "acRetail",
+				"type": "char"
+			},
+			{
+				"name": "acFiscalNo",
+				"type": "char"
+			},
+			{
+				"name": "acPayerS",
+				"type": "varchar"
+			},
+			{
+				"name": "acAcctClaim",
+				"type": "varchar"
+			},
+			{
+				"name": "acAcctOblig",
+				"type": "varchar"
+			},
+			{
+				"name": "aceSlogVer",
+				"type": "char"
+			},
+			{
+				"name": "acPINCodePrefix",
+				"type": "varchar"
+			},
+			{
+				"name": "acAcctGLOpen",
+				"type": "varchar"
+			},
+			{
+				"name": "acNoExciseCalc",
+				"type": "char"
+			},
+			{
+				"name": "acRSBAInDistriktBuyer",
+				"type": "char"
+			},
+			{
+				"name": "acVATPayRealSupp",
+				"type": "char"
+			},
+			{
+				"name": "anWarehouseCapacity",
+				"type": "decimal",
+				"precision": 15,
+				"scale": 2
+			},
+			{
+				"name": "acWarehouseCapacityUM",
+				"type": "char"
+			},
+			{
+				"name": "acAcctExpense",
+				"type": "varchar"
+			},
+			{
+				"name": "acAcctIncome",
+				"type": "varchar"
+			},
+			{
+				"name": "acPermitLumpCompen",
+				"type": "varchar"
+			},
+			{
+				"name": "acRemindersSendType",
+				"type": "char"
+			},
+			{
+				"name": "acPAC",
+				"type": "char"
+			},
+			{
+				"name": "acEslogContractCT",
+				"type": "char"
+			},
+			{
+				"name": "acSKIS2",
+				"type": "varchar"
+			},
+			{
+				"name": "anAllowedInvShort",
+				"type": "decimal",
+				"precision": 5,
+				"scale": 2
+			},
+			{
+				"name": "acAcctRebateExtra",
+				"type": "varchar"
+			},
+			{
+				"name": "acVeterinarian",
+				"type": "char"
+			},
+			{
+				"name": "adANAFCheckDate",
+				"type": "datetime",
+				"precision": 23,
+				"scale": 3
+			},
+			{
+				"name": "acParityType",
+				"type": "char"
+			},
+			{
+				"name": "acSuppParityType",
+				"type": "char"
+			},
+			{
+				"name": "acNaturalPerson",
+				"type": "char"
+			},
+			{
+				"name": "anMinMargin",
+				"type": "decimal",
+				"precision": 8,
+				"scale": 4
+			},
+			{
+				"name": "acNCC",
+				"type": "varchar"
+			},
+			{
+				"name": "acBuyerCalcInvoOutFallDue",
+				"type": "char"
+			},
+			{
+				"name": "acAssortment",
+				"type": "char"
+			},
+			{
+				"name": "acOrgUnit",
+				"type": "varchar"
+			},
+			{
+				"name": "acAccountingPeriod",
+				"type": "char"
+			},
+			{
+				"name": "anOrderValidBuyer",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "anOrderValidSupplier",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "acLEI",
+				"type": "varchar"
+			},
+			{
+				"name": "acFreeStockReport",
+				"type": "char"
+			},
+			{
+				"name": "acWebShopSubject",
+				"type": "char"
+			},
+			{
+				"name": "anDeliveryPriority",
+				"type": "tinyint",
+				"precision": 3
+			},
+			{
+				"name": "anDeliveryDays",
+				"type": "smallint",
+				"precision": 5
+			},
+			{
+				"name": "abPriceRatePos",
+				"type": "bit"
+			}
+		],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "tHE_SetSubj"
+		}
+	}
+}

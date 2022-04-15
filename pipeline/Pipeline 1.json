@@ -1,0 +1,2510 @@
+{
+	"name": "Pipeline 1",
+	"properties": {
+		"activities": [
+			{
+				"name": "Copy data1",
+				"type": "Copy",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "7.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"source": {
+						"type": "SqlServerSource",
+						"queryTimeout": "02:00:00",
+						"partitionOption": "None"
+					},
+					"sink": {
+						"type": "DelimitedTextSink",
+						"storeSettings": {
+							"type": "AzureBlobFSWriteSettings"
+						},
+						"formatSettings": {
+							"type": "DelimitedTextWriteSettings",
+							"quoteAllText": true,
+							"fileExtension": ".txt"
+						}
+					},
+					"enableStaging": false,
+					"translator": {
+						"type": "TabularTranslator",
+						"mappings": [
+							{
+								"source": {
+									"name": "acSubject",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"type": "String",
+									"physicalType": "String",
+									"ordinal": 1
+								}
+							},
+							{
+								"source": {
+									"name": "acBuyer",
+									"type": "String",
+									"physicalType": "char"
+								},
+								"sink": {
+									"type": "String",
+									"physicalType": "String",
+									"ordinal": 2
+								}
+							},
+							{
+								"source": {
+									"name": "acSupplier",
+									"type": "String",
+									"physicalType": "char"
+								},
+								"sink": {
+									"type": "String",
+									"physicalType": "String",
+									"ordinal": 3
+								}
+							},
+							{
+								"source": {
+									"name": "acBank",
+									"type": "String",
+									"physicalType": "char"
+								},
+								"sink": {
+									"type": "String",
+									"physicalType": "String",
+									"ordinal": 4
+								}
+							},
+							{
+								"source": {
+									"name": "acMunicipality",
+									"type": "String",
+									"physicalType": "char"
+								},
+								"sink": {
+									"type": "String",
+									"physicalType": "String",
+									"ordinal": 5
+								}
+							},
+							{
+								"source": {
+									"name": "acLocComm",
+									"type": "String",
+									"physicalType": "char"
+								},
+								"sink": {
+									"type": "String",
+									"physicalType": "String",
+									"ordinal": 6
+								}
+							},
+							{
+								"source": {
+									"name": "acWarehouse",
+									"type": "String",
+									"physicalType": "char"
+								},
+								"sink": {
+									"type": "String",
+									"physicalType": "String",
+									"ordinal": 7
+								}
+							},
+							{
+								"source": {
+									"name": "acWorker",
+									"type": "String",
+									"physicalType": "char"
+								},
+								"sink": {
+									"type": "String",
+									"physicalType": "String",
+									"ordinal": 8
+								}
+							},
+							{
+								"source": {
+									"name": "acUser",
+									"type": "String",
+									"physicalType": "char"
+								},
+								"sink": {
+									"type": "String",
+									"physicalType": "String",
+									"ordinal": 9
+								}
+							},
+							{
+								"source": {
+									"name": "acDept",
+									"type": "String",
+									"physicalType": "char"
+								},
+								"sink": {
+									"type": "String",
+									"physicalType": "String",
+									"ordinal": 10
+								}
+							},
+							{
+								"source": {
+									"name": "acSchool",
+									"type": "String",
+									"physicalType": "char"
+								},
+								"sink": {
+									"type": "String",
+									"physicalType": "String",
+									"ordinal": 11
+								}
+							},
+							{
+								"source": {
+									"name": "acInstitution",
+									"type": "String",
+									"physicalType": "char"
+								},
+								"sink": {
+									"type": "String",
+									"physicalType": "String",
+									"ordinal": 12
+								}
+							},
+							{
+								"source": {
+									"name": "acName2",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"type": "String",
+									"physicalType": "String",
+									"ordinal": 13
+								}
+							},
+							{
+								"source": {
+									"name": "acAddress",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"type": "String",
+									"physicalType": "String",
+									"ordinal": 14
+								}
+							},
+							{
+								"source": {
+									"name": "acName3",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"type": "String",
+									"physicalType": "String",
+									"ordinal": 15
+								}
+							},
+							{
+								"source": {
+									"name": "acPost",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"type": "String",
+									"physicalType": "String",
+									"ordinal": 16
+								}
+							},
+							{
+								"source": {
+									"name": "acCountry",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"type": "String",
+									"physicalType": "String",
+									"ordinal": 17
+								}
+							},
+							{
+								"source": {
+									"name": "anKm",
+									"type": "Int32",
+									"physicalType": "int"
+								},
+								"sink": {
+									"type": "String",
+									"physicalType": "String",
+									"ordinal": 18
+								}
+							},
+							{
+								"source": {
+									"name": "acVATCodePrefix",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"type": "String",
+									"physicalType": "String",
+									"ordinal": 19
+								}
+							},
+							{
+								"source": {
+									"name": "acCode",
+									"type": "String",
+									"physicalType": "char"
+								},
+								"sink": {
+									"type": "String",
+									"physicalType": "String",
+									"ordinal": 20
+								}
+							},
+							{
+								"source": {
+									"name": "acRegion",
+									"type": "String",
+									"physicalType": "char"
+								},
+								"sink": {
+									"type": "String",
+									"physicalType": "String",
+									"ordinal": 21
+								}
+							},
+							{
+								"source": {
+									"name": "acSuprCommune",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"type": "String",
+									"physicalType": "String",
+									"ordinal": 22
+								}
+							},
+							{
+								"source": {
+									"name": "acPhone",
+									"type": "String",
+									"physicalType": "char"
+								},
+								"sink": {
+									"type": "String",
+									"physicalType": "String",
+									"ordinal": 23
+								}
+							},
+							{
+								"source": {
+									"name": "acFax",
+									"type": "String",
+									"physicalType": "char"
+								},
+								"sink": {
+									"type": "String",
+									"physicalType": "String",
+									"ordinal": 24
+								}
+							},
+							{
+								"source": {
+									"name": "acSubUnit",
+									"type": "String",
+									"physicalType": "char"
+								},
+								"sink": {
+									"type": "String",
+									"physicalType": "String",
+									"ordinal": 25
+								}
+							},
+							{
+								"source": {
+									"name": "acPriceRate",
+									"type": "String",
+									"physicalType": "char"
+								},
+								"sink": {
+									"type": "String",
+									"physicalType": "String",
+									"ordinal": 26
+								}
+							},
+							{
+								"source": {
+									"name": "anDaysForPayment",
+									"type": "Int32",
+									"physicalType": "int"
+								},
+								"sink": {
+									"type": "String",
+									"physicalType": "String",
+									"ordinal": 27
+								}
+							},
+							{
+								"source": {
+									"name": "acYearStatement",
+									"type": "String",
+									"physicalType": "char"
+								},
+								"sink": {
+									"type": "String",
+									"physicalType": "String",
+									"ordinal": 28
+								}
+							},
+							{
+								"source": {
+									"name": "adDateState",
+									"type": "DateTime",
+									"physicalType": "smalldatetime"
+								},
+								"sink": {
+									"type": "String",
+									"physicalType": "String",
+									"ordinal": 29
+								}
+							},
+							{
+								"source": {
+									"name": "acStatement",
+									"type": "String",
+									"physicalType": "char"
+								},
+								"sink": {
+									"type": "String",
+									"physicalType": "String",
+									"ordinal": 30
+								}
+							},
+							{
+								"source": {
+									"name": "anLimit",
+									"type": "Decimal",
+									"physicalType": "money",
+									"scale": 4,
+									"precision": 19
+								},
+								"sink": {
+									"type": "String",
+									"physicalType": "String",
+									"ordinal": 31
+								}
+							},
+							{
+								"source": {
+									"name": "adDateLimit",
+									"type": "DateTime",
+									"physicalType": "smalldatetime"
+								},
+								"sink": {
+									"type": "String",
+									"physicalType": "String",
+									"ordinal": 32
+								}
+							},
+							{
+								"source": {
+									"name": "anMaxDaysPayDelay",
+									"type": "Int32",
+									"physicalType": "int"
+								},
+								"sink": {
+									"type": "String",
+									"physicalType": "String",
+									"ordinal": 33
+								}
+							},
+							{
+								"source": {
+									"name": "acSubjTypeSupp",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"type": "String",
+									"physicalType": "String",
+									"ordinal": 34
+								}
+							},
+							{
+								"source": {
+									"name": "acSubjTypeBuyer",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"type": "String",
+									"physicalType": "String",
+									"ordinal": 35
+								}
+							},
+							{
+								"source": {
+									"name": "acStockManage",
+									"type": "String",
+									"physicalType": "char"
+								},
+								"sink": {
+									"type": "String",
+									"physicalType": "String",
+									"ordinal": 36
+								}
+							},
+							{
+								"source": {
+									"name": "acStockValue",
+									"type": "String",
+									"physicalType": "char"
+								},
+								"sink": {
+									"type": "String",
+									"physicalType": "String",
+									"ordinal": 37
+								}
+							},
+							{
+								"source": {
+									"name": "acStockInMinus",
+									"type": "String",
+									"physicalType": "char"
+								},
+								"sink": {
+									"type": "String",
+									"physicalType": "String",
+									"ordinal": 38
+								}
+							},
+							{
+								"source": {
+									"name": "adDateInvent",
+									"type": "DateTime",
+									"physicalType": "smalldatetime"
+								},
+								"sink": {
+									"type": "String",
+									"physicalType": "String",
+									"ordinal": 39
+								}
+							},
+							{
+								"source": {
+									"name": "anClerk",
+									"type": "Int32",
+									"physicalType": "int"
+								},
+								"sink": {
+									"type": "String",
+									"physicalType": "String",
+									"ordinal": 40
+								}
+							},
+							{
+								"source": {
+									"name": "anRebate",
+									"type": "Decimal",
+									"physicalType": "decimal",
+									"scale": 4,
+									"precision": 8
+								},
+								"sink": {
+									"type": "String",
+									"physicalType": "String",
+									"ordinal": 41
+								}
+							},
+							{
+								"source": {
+									"name": "acWayOfSale",
+									"type": "String",
+									"physicalType": "char"
+								},
+								"sink": {
+									"type": "String",
+									"physicalType": "String",
+									"ordinal": 42
+								}
+							},
+							{
+								"source": {
+									"name": "acCurrency",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"type": "String",
+									"physicalType": "String",
+									"ordinal": 43
+								}
+							},
+							{
+								"source": {
+									"name": "acPriceCalcMethod",
+									"type": "String",
+									"physicalType": "char"
+								},
+								"sink": {
+									"type": "String",
+									"physicalType": "String",
+									"ordinal": 44
+								}
+							},
+							{
+								"source": {
+									"name": "acPayMethod",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"type": "String",
+									"physicalType": "String",
+									"ordinal": 45
+								}
+							},
+							{
+								"source": {
+									"name": "acDelivery",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"type": "String",
+									"physicalType": "String",
+									"ordinal": 46
+								}
+							},
+							{
+								"source": {
+									"name": "acRegNo",
+									"type": "String",
+									"physicalType": "char"
+								},
+								"sink": {
+									"type": "String",
+									"physicalType": "String",
+									"ordinal": 47
+								}
+							},
+							{
+								"source": {
+									"name": "acPayer",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"type": "String",
+									"physicalType": "String",
+									"ordinal": 48
+								}
+							},
+							{
+								"source": {
+									"name": "acActivityCode",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"type": "String",
+									"physicalType": "String",
+									"ordinal": 49
+								}
+							},
+							{
+								"source": {
+									"name": "acSeparSaleCalc",
+									"type": "String",
+									"physicalType": "char"
+								},
+								"sink": {
+									"type": "String",
+									"physicalType": "String",
+									"ordinal": 50
+								}
+							},
+							{
+								"source": {
+									"name": "acSuppPriceCalcMet",
+									"type": "String",
+									"physicalType": "char"
+								},
+								"sink": {
+									"type": "String",
+									"physicalType": "String",
+									"ordinal": 51
+								}
+							},
+							{
+								"source": {
+									"name": "anSuppDiscount",
+									"type": "Decimal",
+									"physicalType": "decimal",
+									"scale": 6,
+									"precision": 19
+								},
+								"sink": {
+									"type": "String",
+									"physicalType": "String",
+									"ordinal": 52
+								}
+							},
+							{
+								"source": {
+									"name": "acSuppSaleMet",
+									"type": "String",
+									"physicalType": "char"
+								},
+								"sink": {
+									"type": "String",
+									"physicalType": "String",
+									"ordinal": 53
+								}
+							},
+							{
+								"source": {
+									"name": "acSuppYearStatement",
+									"type": "String",
+									"physicalType": "char"
+								},
+								"sink": {
+									"type": "String",
+									"physicalType": "String",
+									"ordinal": 54
+								}
+							},
+							{
+								"source": {
+									"name": "adSuppDateSta",
+									"type": "DateTime",
+									"physicalType": "smalldatetime"
+								},
+								"sink": {
+									"type": "String",
+									"physicalType": "String",
+									"ordinal": 55
+								}
+							},
+							{
+								"source": {
+									"name": "anSuppPayDays",
+									"type": "Int32",
+									"physicalType": "int"
+								},
+								"sink": {
+									"type": "String",
+									"physicalType": "String",
+									"ordinal": 56
+								}
+							},
+							{
+								"source": {
+									"name": "acSuppPayMet",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"type": "String",
+									"physicalType": "String",
+									"ordinal": 57
+								}
+							},
+							{
+								"source": {
+									"name": "acSuppStatement",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"type": "String",
+									"physicalType": "String",
+									"ordinal": 58
+								}
+							},
+							{
+								"source": {
+									"name": "anSuppLimit",
+									"type": "Decimal",
+									"physicalType": "money",
+									"scale": 4,
+									"precision": 19
+								},
+								"sink": {
+									"type": "String",
+									"physicalType": "String",
+									"ordinal": 59
+								}
+							},
+							{
+								"source": {
+									"name": "adSuppDateLim",
+									"type": "DateTime",
+									"physicalType": "smalldatetime"
+								},
+								"sink": {
+									"type": "String",
+									"physicalType": "String",
+									"ordinal": 60
+								}
+							},
+							{
+								"source": {
+									"name": "acSuppDelivery",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"type": "String",
+									"physicalType": "String",
+									"ordinal": 61
+								}
+							},
+							{
+								"source": {
+									"name": "acSuppCurr",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"type": "String",
+									"physicalType": "String",
+									"ordinal": 62
+								}
+							},
+							{
+								"source": {
+									"name": "anSuppClerk",
+									"type": "Int32",
+									"physicalType": "int"
+								},
+								"sink": {
+									"type": "String",
+									"physicalType": "String",
+									"ordinal": 63
+								}
+							},
+							{
+								"source": {
+									"name": "acPayOrdPriorty",
+									"type": "String",
+									"physicalType": "char"
+								},
+								"sink": {
+									"type": "String",
+									"physicalType": "String",
+									"ordinal": 64
+								}
+							},
+							{
+								"source": {
+									"name": "acSWIFTCode",
+									"type": "String",
+									"physicalType": "char"
+								},
+								"sink": {
+									"type": "String",
+									"physicalType": "String",
+									"ordinal": 65
+								}
+							},
+							{
+								"source": {
+									"name": "acATWarehouse",
+									"type": "String",
+									"physicalType": "char"
+								},
+								"sink": {
+									"type": "String",
+									"physicalType": "String",
+									"ordinal": 66
+								}
+							},
+							{
+								"source": {
+									"name": "acMunicipCode",
+									"type": "String",
+									"physicalType": "char"
+								},
+								"sink": {
+									"type": "String",
+									"physicalType": "String",
+									"ordinal": 67
+								}
+							},
+							{
+								"source": {
+									"name": "acDispDoc",
+									"type": "String",
+									"physicalType": "char"
+								},
+								"sink": {
+									"type": "String",
+									"physicalType": "String",
+									"ordinal": 68
+								}
+							},
+							{
+								"source": {
+									"name": "acSetOfInterestRates",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"type": "String",
+									"physicalType": "String",
+									"ordinal": 69
+								}
+							},
+							{
+								"source": {
+									"name": "acStockRetailValue",
+									"type": "String",
+									"physicalType": "char"
+								},
+								"sink": {
+									"type": "String",
+									"physicalType": "String",
+									"ordinal": 70
+								}
+							},
+							{
+								"source": {
+									"name": "acParity",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"type": "String",
+									"physicalType": "String",
+									"ordinal": 71
+								}
+							},
+							{
+								"source": {
+									"name": "acParityPost",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"type": "String",
+									"physicalType": "String",
+									"ordinal": 72
+								}
+							},
+							{
+								"source": {
+									"name": "acSuppParity",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"type": "String",
+									"physicalType": "String",
+									"ordinal": 73
+								}
+							},
+							{
+								"source": {
+									"name": "acSuppParityPost",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"type": "String",
+									"physicalType": "String",
+									"ordinal": 74
+								}
+							},
+							{
+								"source": {
+									"name": "acFieldSA",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"type": "String",
+									"physicalType": "String",
+									"ordinal": 75
+								}
+							},
+							{
+								"source": {
+									"name": "acFieldSB",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"type": "String",
+									"physicalType": "String",
+									"ordinal": 76
+								}
+							},
+							{
+								"source": {
+									"name": "acFieldSC",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"type": "String",
+									"physicalType": "String",
+									"ordinal": 77
+								}
+							},
+							{
+								"source": {
+									"name": "acFieldSD",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"type": "String",
+									"physicalType": "String",
+									"ordinal": 78
+								}
+							},
+							{
+								"source": {
+									"name": "acFieldSE",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"type": "String",
+									"physicalType": "String",
+									"ordinal": 79
+								}
+							},
+							{
+								"source": {
+									"name": "acFieldSF",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"type": "String",
+									"physicalType": "String",
+									"ordinal": 80
+								}
+							},
+							{
+								"source": {
+									"name": "acFieldSG",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"type": "String",
+									"physicalType": "String",
+									"ordinal": 81
+								}
+							},
+							{
+								"source": {
+									"name": "acFieldSH",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"type": "String",
+									"physicalType": "String",
+									"ordinal": 82
+								}
+							},
+							{
+								"source": {
+									"name": "acFieldSI",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"type": "String",
+									"physicalType": "String",
+									"ordinal": 83
+								}
+							},
+							{
+								"source": {
+									"name": "acFieldSJ",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"type": "String",
+									"physicalType": "String",
+									"ordinal": 84
+								}
+							},
+							{
+								"source": {
+									"name": "anFieldNA",
+									"type": "Decimal",
+									"physicalType": "decimal",
+									"scale": 6,
+									"precision": 19
+								},
+								"sink": {
+									"type": "String",
+									"physicalType": "String",
+									"ordinal": 85
+								}
+							},
+							{
+								"source": {
+									"name": "anFieldNB",
+									"type": "Decimal",
+									"physicalType": "decimal",
+									"scale": 6,
+									"precision": 19
+								},
+								"sink": {
+									"type": "String",
+									"physicalType": "String",
+									"ordinal": 86
+								}
+							},
+							{
+								"source": {
+									"name": "anFieldNC",
+									"type": "Decimal",
+									"physicalType": "decimal",
+									"scale": 6,
+									"precision": 19
+								},
+								"sink": {
+									"type": "String",
+									"physicalType": "String",
+									"ordinal": 87
+								}
+							},
+							{
+								"source": {
+									"name": "anFieldND",
+									"type": "Decimal",
+									"physicalType": "decimal",
+									"scale": 6,
+									"precision": 19
+								},
+								"sink": {
+									"type": "String",
+									"physicalType": "String",
+									"ordinal": 88
+								}
+							},
+							{
+								"source": {
+									"name": "anFieldNE",
+									"type": "Decimal",
+									"physicalType": "decimal",
+									"scale": 6,
+									"precision": 19
+								},
+								"sink": {
+									"type": "String",
+									"physicalType": "String",
+									"ordinal": 89
+								}
+							},
+							{
+								"source": {
+									"name": "anFieldNF",
+									"type": "Decimal",
+									"physicalType": "decimal",
+									"scale": 6,
+									"precision": 19
+								},
+								"sink": {
+									"type": "String",
+									"physicalType": "String",
+									"ordinal": 90
+								}
+							},
+							{
+								"source": {
+									"name": "anFieldNG",
+									"type": "Decimal",
+									"physicalType": "decimal",
+									"scale": 6,
+									"precision": 19
+								},
+								"sink": {
+									"type": "String",
+									"physicalType": "String",
+									"ordinal": 91
+								}
+							},
+							{
+								"source": {
+									"name": "anFieldNH",
+									"type": "Decimal",
+									"physicalType": "decimal",
+									"scale": 6,
+									"precision": 19
+								},
+								"sink": {
+									"type": "String",
+									"physicalType": "String",
+									"ordinal": 92
+								}
+							},
+							{
+								"source": {
+									"name": "anFieldNI",
+									"type": "Decimal",
+									"physicalType": "decimal",
+									"scale": 6,
+									"precision": 19
+								},
+								"sink": {
+									"type": "String",
+									"physicalType": "String",
+									"ordinal": 93
+								}
+							},
+							{
+								"source": {
+									"name": "anFieldNJ",
+									"type": "Decimal",
+									"physicalType": "decimal",
+									"scale": 6,
+									"precision": 19
+								},
+								"sink": {
+									"type": "String",
+									"physicalType": "String",
+									"ordinal": 94
+								}
+							},
+							{
+								"source": {
+									"name": "adFieldDA",
+									"type": "DateTime",
+									"physicalType": "datetime"
+								},
+								"sink": {
+									"type": "String",
+									"physicalType": "String",
+									"ordinal": 95
+								}
+							},
+							{
+								"source": {
+									"name": "adFieldDB",
+									"type": "DateTime",
+									"physicalType": "datetime"
+								},
+								"sink": {
+									"type": "String",
+									"physicalType": "String",
+									"ordinal": 96
+								}
+							},
+							{
+								"source": {
+									"name": "adFieldDC",
+									"type": "DateTime",
+									"physicalType": "datetime"
+								},
+								"sink": {
+									"type": "String",
+									"physicalType": "String",
+									"ordinal": 97
+								}
+							},
+							{
+								"source": {
+									"name": "adFieldDD",
+									"type": "DateTime",
+									"physicalType": "datetime"
+								},
+								"sink": {
+									"type": "String",
+									"physicalType": "String",
+									"ordinal": 98
+								}
+							},
+							{
+								"source": {
+									"name": "acSKIS",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"type": "String",
+									"physicalType": "String",
+									"ordinal": 99
+								}
+							},
+							{
+								"source": {
+									"name": "acXMLDocType",
+									"type": "String",
+									"physicalType": "char"
+								},
+								"sink": {
+									"type": "String",
+									"physicalType": "String",
+									"ordinal": 100
+								}
+							},
+							{
+								"source": {
+									"name": "acXMLDocCript",
+									"type": "String",
+									"physicalType": "char"
+								},
+								"sink": {
+									"type": "String",
+									"physicalType": "String",
+									"ordinal": 101
+								}
+							},
+							{
+								"source": {
+									"name": "acXMLDocSign",
+									"type": "String",
+									"physicalType": "char"
+								},
+								"sink": {
+									"type": "String",
+									"physicalType": "String",
+									"ordinal": 102
+								}
+							},
+							{
+								"source": {
+									"name": "acCreatePayOrd",
+									"type": "String",
+									"physicalType": "char"
+								},
+								"sink": {
+									"type": "String",
+									"physicalType": "String",
+									"ordinal": 103
+								}
+							},
+							{
+								"source": {
+									"name": "acXMLGLNNo",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"type": "String",
+									"physicalType": "String",
+									"ordinal": 104
+								}
+							},
+							{
+								"source": {
+									"name": "acIntrstsBuyer",
+									"type": "String",
+									"physicalType": "char"
+								},
+								"sink": {
+									"type": "String",
+									"physicalType": "String",
+									"ordinal": 105
+								}
+							},
+							{
+								"source": {
+									"name": "acIntrstsSupplier",
+									"type": "String",
+									"physicalType": "char"
+								},
+								"sink": {
+									"type": "String",
+									"physicalType": "String",
+									"ordinal": 106
+								}
+							},
+							{
+								"source": {
+									"name": "acRSBAInDistrikt",
+									"type": "String",
+									"physicalType": "char"
+								},
+								"sink": {
+									"type": "String",
+									"physicalType": "String",
+									"ordinal": 107
+								}
+							},
+							{
+								"source": {
+									"name": "acHTTPPath",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"type": "String",
+									"physicalType": "String",
+									"ordinal": 108
+								}
+							},
+							{
+								"source": {
+									"name": "acIBANprefix",
+									"type": "String",
+									"physicalType": "char"
+								},
+								"sink": {
+									"type": "String",
+									"physicalType": "String",
+									"ordinal": 109
+								}
+							},
+							{
+								"source": {
+									"name": "acSuprDept",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"type": "String",
+									"physicalType": "String",
+									"ordinal": 110
+								}
+							},
+							{
+								"source": {
+									"name": "anSubjVar1",
+									"type": "Decimal",
+									"physicalType": "decimal",
+									"scale": 6,
+									"precision": 19
+								},
+								"sink": {
+									"type": "String",
+									"physicalType": "String",
+									"ordinal": 111
+								}
+							},
+							{
+								"source": {
+									"name": "anSubjVar2",
+									"type": "Decimal",
+									"physicalType": "decimal",
+									"scale": 6,
+									"precision": 19
+								},
+								"sink": {
+									"type": "String",
+									"physicalType": "String",
+									"ordinal": 112
+								}
+							},
+							{
+								"source": {
+									"name": "anSubjVar3",
+									"type": "Decimal",
+									"physicalType": "decimal",
+									"scale": 6,
+									"precision": 19
+								},
+								"sink": {
+									"type": "String",
+									"physicalType": "String",
+									"ordinal": 113
+								}
+							},
+							{
+								"source": {
+									"name": "anSubjVar4",
+									"type": "Decimal",
+									"physicalType": "decimal",
+									"scale": 6,
+									"precision": 19
+								},
+								"sink": {
+									"type": "String",
+									"physicalType": "String",
+									"ordinal": 114
+								}
+							},
+							{
+								"source": {
+									"name": "anSubjVar5",
+									"type": "Decimal",
+									"physicalType": "decimal",
+									"scale": 6,
+									"precision": 19
+								},
+								"sink": {
+									"type": "String",
+									"physicalType": "String",
+									"ordinal": 115
+								}
+							},
+							{
+								"source": {
+									"name": "anSubjVar6",
+									"type": "Decimal",
+									"physicalType": "decimal",
+									"scale": 6,
+									"precision": 19
+								},
+								"sink": {
+									"type": "String",
+									"physicalType": "String",
+									"ordinal": 116
+								}
+							},
+							{
+								"source": {
+									"name": "anSubjVar7",
+									"type": "Decimal",
+									"physicalType": "decimal",
+									"scale": 6,
+									"precision": 19
+								},
+								"sink": {
+									"type": "String",
+									"physicalType": "String",
+									"ordinal": 117
+								}
+							},
+							{
+								"source": {
+									"name": "anSubjVar8",
+									"type": "Decimal",
+									"physicalType": "decimal",
+									"scale": 6,
+									"precision": 19
+								},
+								"sink": {
+									"type": "String",
+									"physicalType": "String",
+									"ordinal": 118
+								}
+							},
+							{
+								"source": {
+									"name": "anSubjVar9",
+									"type": "Decimal",
+									"physicalType": "decimal",
+									"scale": 6,
+									"precision": 19
+								},
+								"sink": {
+									"type": "String",
+									"physicalType": "String",
+									"ordinal": 119
+								}
+							},
+							{
+								"source": {
+									"name": "anSubjVar10",
+									"type": "Decimal",
+									"physicalType": "decimal",
+									"scale": 6,
+									"precision": 19
+								},
+								"sink": {
+									"type": "String",
+									"physicalType": "String",
+									"ordinal": 120
+								}
+							},
+							{
+								"source": {
+									"name": "anLatitude",
+									"type": "Decimal",
+									"physicalType": "decimal",
+									"scale": 14,
+									"precision": 19
+								},
+								"sink": {
+									"type": "String",
+									"physicalType": "String",
+									"ordinal": 121
+								}
+							},
+							{
+								"source": {
+									"name": "anLongitude",
+									"type": "Decimal",
+									"physicalType": "decimal",
+									"scale": 14,
+									"precision": 19
+								},
+								"sink": {
+									"type": "String",
+									"physicalType": "String",
+									"ordinal": 122
+								}
+							},
+							{
+								"source": {
+									"name": "anMaxRebate",
+									"type": "Decimal",
+									"physicalType": "decimal",
+									"scale": 4,
+									"precision": 8
+								},
+								"sink": {
+									"type": "String",
+									"physicalType": "String",
+									"ordinal": 123
+								}
+							},
+							{
+								"source": {
+									"name": "acPerInv",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"type": "String",
+									"physicalType": "String",
+									"ordinal": 124
+								}
+							},
+							{
+								"source": {
+									"name": "acSuppPerInv",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"type": "String",
+									"physicalType": "String",
+									"ordinal": 125
+								}
+							},
+							{
+								"source": {
+									"name": "acActive",
+									"type": "String",
+									"physicalType": "char"
+								},
+								"sink": {
+									"type": "String",
+									"physicalType": "String",
+									"ordinal": 126
+								}
+							},
+							{
+								"source": {
+									"name": "acActiveContacts",
+									"type": "String",
+									"physicalType": "char"
+								},
+								"sink": {
+									"type": "String",
+									"physicalType": "String",
+									"ordinal": 127
+								}
+							},
+							{
+								"source": {
+									"name": "acDeptRegNo",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"type": "String",
+									"physicalType": "String",
+									"ordinal": 128
+								}
+							},
+							{
+								"source": {
+									"name": "acPayLoc",
+									"type": "String",
+									"physicalType": "char"
+								},
+								"sink": {
+									"type": "String",
+									"physicalType": "String",
+									"ordinal": 129
+								}
+							},
+							{
+								"source": {
+									"name": "acBuyerLimitCtrl",
+									"type": "String",
+									"physicalType": "char"
+								},
+								"sink": {
+									"type": "String",
+									"physicalType": "String",
+									"ordinal": 130
+								}
+							},
+							{
+								"source": {
+									"name": "acSubUnitCode",
+									"type": "String",
+									"physicalType": "char"
+								},
+								"sink": {
+									"type": "String",
+									"physicalType": "String",
+									"ordinal": 131
+								}
+							},
+							{
+								"source": {
+									"name": "acJIBCode",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"type": "String",
+									"physicalType": "String",
+									"ordinal": 132
+								}
+							},
+							{
+								"source": {
+									"name": "adTimeIns",
+									"type": "DateTime",
+									"physicalType": "datetime"
+								},
+								"sink": {
+									"type": "String",
+									"physicalType": "String",
+									"ordinal": 133
+								}
+							},
+							{
+								"source": {
+									"name": "anUserIns",
+									"type": "Int32",
+									"physicalType": "int"
+								},
+								"sink": {
+									"type": "String",
+									"physicalType": "String",
+									"ordinal": 134
+								}
+							},
+							{
+								"source": {
+									"name": "adTimeChg",
+									"type": "DateTime",
+									"physicalType": "datetime"
+								},
+								"sink": {
+									"type": "String",
+									"physicalType": "String",
+									"ordinal": 135
+								}
+							},
+							{
+								"source": {
+									"name": "anUserChg",
+									"type": "Int32",
+									"physicalType": "int"
+								},
+								"sink": {
+									"type": "String",
+									"physicalType": "String",
+									"ordinal": 136
+								}
+							},
+							{
+								"source": {
+									"name": "acNote",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"type": "String",
+									"physicalType": "String",
+									"ordinal": 137
+								}
+							},
+							{
+								"source": {
+									"name": "acPIN",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"type": "String",
+									"physicalType": "String",
+									"ordinal": 138
+								}
+							},
+							{
+								"source": {
+									"name": "acDeptMuni",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"type": "String",
+									"physicalType": "String",
+									"ordinal": 139
+								}
+							},
+							{
+								"source": {
+									"name": "anContactPrsnB",
+									"type": "Int32",
+									"physicalType": "int"
+								},
+								"sink": {
+									"type": "String",
+									"physicalType": "String",
+									"ordinal": 140
+								}
+							},
+							{
+								"source": {
+									"name": "anContactPrsnS",
+									"type": "Int32",
+									"physicalType": "int"
+								},
+								"sink": {
+									"type": "String",
+									"physicalType": "String",
+									"ordinal": 141
+								}
+							},
+							{
+								"source": {
+									"name": "acSubUnitRegNo",
+									"type": "String",
+									"physicalType": "char"
+								},
+								"sink": {
+									"type": "String",
+									"physicalType": "String",
+									"ordinal": 142
+								}
+							},
+							{
+								"source": {
+									"name": "acSubUnitTaxCode",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"type": "String",
+									"physicalType": "String",
+									"ordinal": 143
+								}
+							},
+							{
+								"source": {
+									"name": "anWorkingHours",
+									"type": "Int32",
+									"physicalType": "int"
+								},
+								"sink": {
+									"type": "String",
+									"physicalType": "String",
+									"ordinal": 144
+								}
+							},
+							{
+								"source": {
+									"name": "anWorkingDaysInWeek",
+									"type": "Int32",
+									"physicalType": "int"
+								},
+								"sink": {
+									"type": "String",
+									"physicalType": "String",
+									"ordinal": 145
+								}
+							},
+							{
+								"source": {
+									"name": "acBudgetUser",
+									"type": "String",
+									"physicalType": "char"
+								},
+								"sink": {
+									"type": "String",
+									"physicalType": "String",
+									"ordinal": 146
+								}
+							},
+							{
+								"source": {
+									"name": "acExciseNumber",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"type": "String",
+									"physicalType": "String",
+									"ordinal": 147
+								}
+							},
+							{
+								"source": {
+									"name": "anInstalmentNo",
+									"type": "Int32",
+									"physicalType": "int"
+								},
+								"sink": {
+									"type": "String",
+									"physicalType": "String",
+									"ordinal": 148
+								}
+							},
+							{
+								"source": {
+									"name": "anSuppInstalmentNo",
+									"type": "Int32",
+									"physicalType": "int"
+								},
+								"sink": {
+									"type": "String",
+									"physicalType": "String",
+									"ordinal": 149
+								}
+							},
+							{
+								"source": {
+									"name": "acBranch",
+									"type": "String",
+									"physicalType": "char"
+								},
+								"sink": {
+									"type": "String",
+									"physicalType": "String",
+									"ordinal": 150
+								}
+							},
+							{
+								"source": {
+									"name": "acBranchForm",
+									"type": "String",
+									"physicalType": "char"
+								},
+								"sink": {
+									"type": "String",
+									"physicalType": "String",
+									"ordinal": 151
+								}
+							},
+							{
+								"source": {
+									"name": "anOrgColor",
+									"type": "Int32",
+									"physicalType": "int"
+								},
+								"sink": {
+									"type": "String",
+									"physicalType": "String",
+									"ordinal": 152
+								}
+							},
+							{
+								"source": {
+									"name": "acLoyaltyPrefix",
+									"type": "String",
+									"physicalType": "char"
+								},
+								"sink": {
+									"type": "String",
+									"physicalType": "String",
+									"ordinal": 153
+								}
+							},
+							{
+								"source": {
+									"name": "acDontSendReminders",
+									"type": "String",
+									"physicalType": "char"
+								},
+								"sink": {
+									"type": "String",
+									"physicalType": "String",
+									"ordinal": 154
+								}
+							},
+							{
+								"source": {
+									"name": "acGLN",
+									"type": "String",
+									"physicalType": "char"
+								},
+								"sink": {
+									"type": "String",
+									"physicalType": "String",
+									"ordinal": 155
+								}
+							},
+							{
+								"source": {
+									"name": "acMunicipCreditor",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"type": "String",
+									"physicalType": "String",
+									"ordinal": 156
+								}
+							},
+							{
+								"source": {
+									"name": "acBankCode",
+									"type": "String",
+									"physicalType": "char"
+								},
+								"sink": {
+									"type": "String",
+									"physicalType": "String",
+									"ordinal": 157
+								}
+							},
+							{
+								"source": {
+									"name": "anQId",
+									"type": "Int32",
+									"physicalType": "int"
+								},
+								"sink": {
+									"type": "String",
+									"physicalType": "String",
+									"ordinal": 158
+								}
+							},
+							{
+								"source": {
+									"name": "acRetail",
+									"type": "String",
+									"physicalType": "char"
+								},
+								"sink": {
+									"type": "String",
+									"physicalType": "String",
+									"ordinal": 159
+								}
+							},
+							{
+								"source": {
+									"name": "acFiscalNo",
+									"type": "String",
+									"physicalType": "char"
+								},
+								"sink": {
+									"type": "String",
+									"physicalType": "String",
+									"ordinal": 160
+								}
+							},
+							{
+								"source": {
+									"name": "acPayerS",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"type": "String",
+									"physicalType": "String",
+									"ordinal": 161
+								}
+							},
+							{
+								"source": {
+									"name": "acAcctClaim",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"type": "String",
+									"physicalType": "String",
+									"ordinal": 162
+								}
+							},
+							{
+								"source": {
+									"name": "acAcctOblig",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"type": "String",
+									"physicalType": "String",
+									"ordinal": 163
+								}
+							},
+							{
+								"source": {
+									"name": "aceSlogVer",
+									"type": "String",
+									"physicalType": "char"
+								},
+								"sink": {
+									"type": "String",
+									"physicalType": "String",
+									"ordinal": 164
+								}
+							},
+							{
+								"source": {
+									"name": "acPINCodePrefix",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"type": "String",
+									"physicalType": "String",
+									"ordinal": 165
+								}
+							},
+							{
+								"source": {
+									"name": "acAcctGLOpen",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"type": "String",
+									"physicalType": "String",
+									"ordinal": 166
+								}
+							},
+							{
+								"source": {
+									"name": "acNoExciseCalc",
+									"type": "String",
+									"physicalType": "char"
+								},
+								"sink": {
+									"type": "String",
+									"physicalType": "String",
+									"ordinal": 167
+								}
+							},
+							{
+								"source": {
+									"name": "acRSBAInDistriktBuyer",
+									"type": "String",
+									"physicalType": "char"
+								},
+								"sink": {
+									"type": "String",
+									"physicalType": "String",
+									"ordinal": 168
+								}
+							},
+							{
+								"source": {
+									"name": "acVATPayRealSupp",
+									"type": "String",
+									"physicalType": "char"
+								},
+								"sink": {
+									"type": "String",
+									"physicalType": "String",
+									"ordinal": 169
+								}
+							},
+							{
+								"source": {
+									"name": "anWarehouseCapacity",
+									"type": "Decimal",
+									"physicalType": "decimal",
+									"scale": 2,
+									"precision": 15
+								},
+								"sink": {
+									"type": "String",
+									"physicalType": "String",
+									"ordinal": 170
+								}
+							},
+							{
+								"source": {
+									"name": "acWarehouseCapacityUM",
+									"type": "String",
+									"physicalType": "char"
+								},
+								"sink": {
+									"type": "String",
+									"physicalType": "String",
+									"ordinal": 171
+								}
+							},
+							{
+								"source": {
+									"name": "acAcctExpense",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"type": "String",
+									"physicalType": "String",
+									"ordinal": 172
+								}
+							},
+							{
+								"source": {
+									"name": "acAcctIncome",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"type": "String",
+									"physicalType": "String",
+									"ordinal": 173
+								}
+							},
+							{
+								"source": {
+									"name": "acPermitLumpCompen",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"type": "String",
+									"physicalType": "String",
+									"ordinal": 174
+								}
+							},
+							{
+								"source": {
+									"name": "acRemindersSendType",
+									"type": "String",
+									"physicalType": "char"
+								},
+								"sink": {
+									"type": "String",
+									"physicalType": "String",
+									"ordinal": 175
+								}
+							},
+							{
+								"source": {
+									"name": "acPAC",
+									"type": "String",
+									"physicalType": "char"
+								},
+								"sink": {
+									"type": "String",
+									"physicalType": "String",
+									"ordinal": 176
+								}
+							},
+							{
+								"source": {
+									"name": "acEslogContractCT",
+									"type": "String",
+									"physicalType": "char"
+								},
+								"sink": {
+									"type": "String",
+									"physicalType": "String",
+									"ordinal": 177
+								}
+							},
+							{
+								"source": {
+									"name": "acSKIS2",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"type": "String",
+									"physicalType": "String",
+									"ordinal": 178
+								}
+							},
+							{
+								"source": {
+									"name": "anAllowedInvShort",
+									"type": "Decimal",
+									"physicalType": "decimal",
+									"scale": 2,
+									"precision": 5
+								},
+								"sink": {
+									"type": "String",
+									"physicalType": "String",
+									"ordinal": 179
+								}
+							},
+							{
+								"source": {
+									"name": "acAcctRebateExtra",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"type": "String",
+									"physicalType": "String",
+									"ordinal": 180
+								}
+							},
+							{
+								"source": {
+									"name": "acVeterinarian",
+									"type": "String",
+									"physicalType": "char"
+								},
+								"sink": {
+									"type": "String",
+									"physicalType": "String",
+									"ordinal": 181
+								}
+							},
+							{
+								"source": {
+									"name": "adANAFCheckDate",
+									"type": "DateTime",
+									"physicalType": "datetime"
+								},
+								"sink": {
+									"type": "String",
+									"physicalType": "String",
+									"ordinal": 182
+								}
+							},
+							{
+								"source": {
+									"name": "acParityType",
+									"type": "String",
+									"physicalType": "char"
+								},
+								"sink": {
+									"type": "String",
+									"physicalType": "String",
+									"ordinal": 183
+								}
+							},
+							{
+								"source": {
+									"name": "acSuppParityType",
+									"type": "String",
+									"physicalType": "char"
+								},
+								"sink": {
+									"type": "String",
+									"physicalType": "String",
+									"ordinal": 184
+								}
+							},
+							{
+								"source": {
+									"name": "acNaturalPerson",
+									"type": "String",
+									"physicalType": "char"
+								},
+								"sink": {
+									"type": "String",
+									"physicalType": "String",
+									"ordinal": 185
+								}
+							},
+							{
+								"source": {
+									"name": "anMinMargin",
+									"type": "Decimal",
+									"physicalType": "decimal",
+									"scale": 4,
+									"precision": 8
+								},
+								"sink": {
+									"type": "String",
+									"physicalType": "String",
+									"ordinal": 186
+								}
+							},
+							{
+								"source": {
+									"name": "acNCC",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"type": "String",
+									"physicalType": "String",
+									"ordinal": 187
+								}
+							},
+							{
+								"source": {
+									"name": "acBuyerCalcInvoOutFallDue",
+									"type": "String",
+									"physicalType": "char"
+								},
+								"sink": {
+									"type": "String",
+									"physicalType": "String",
+									"ordinal": 188
+								}
+							},
+							{
+								"source": {
+									"name": "acAssortment",
+									"type": "String",
+									"physicalType": "char"
+								},
+								"sink": {
+									"type": "String",
+									"physicalType": "String",
+									"ordinal": 189
+								}
+							},
+							{
+								"source": {
+									"name": "acOrgUnit",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"type": "String",
+									"physicalType": "String",
+									"ordinal": 190
+								}
+							},
+							{
+								"source": {
+									"name": "acAccountingPeriod",
+									"type": "String",
+									"physicalType": "char"
+								},
+								"sink": {
+									"type": "String",
+									"physicalType": "String",
+									"ordinal": 191
+								}
+							},
+							{
+								"source": {
+									"name": "anOrderValidBuyer",
+									"type": "Int32",
+									"physicalType": "int"
+								},
+								"sink": {
+									"type": "String",
+									"physicalType": "String",
+									"ordinal": 192
+								}
+							},
+							{
+								"source": {
+									"name": "anOrderValidSupplier",
+									"type": "Int32",
+									"physicalType": "int"
+								},
+								"sink": {
+									"type": "String",
+									"physicalType": "String",
+									"ordinal": 193
+								}
+							},
+							{
+								"source": {
+									"name": "acLEI",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"type": "String",
+									"physicalType": "String",
+									"ordinal": 194
+								}
+							},
+							{
+								"source": {
+									"name": "acFreeStockReport",
+									"type": "String",
+									"physicalType": "char"
+								},
+								"sink": {
+									"type": "String",
+									"physicalType": "String",
+									"ordinal": 195
+								}
+							},
+							{
+								"source": {
+									"name": "acWebShopSubject",
+									"type": "String",
+									"physicalType": "char"
+								},
+								"sink": {
+									"type": "String",
+									"physicalType": "String",
+									"ordinal": 196
+								}
+							},
+							{
+								"source": {
+									"name": "anDeliveryPriority",
+									"type": "Byte",
+									"physicalType": "tinyint"
+								},
+								"sink": {
+									"type": "String",
+									"physicalType": "String",
+									"ordinal": 197
+								}
+							},
+							{
+								"source": {
+									"name": "anDeliveryDays",
+									"type": "Int16",
+									"physicalType": "smallint"
+								},
+								"sink": {
+									"type": "String",
+									"physicalType": "String",
+									"ordinal": 198
+								}
+							},
+							{
+								"source": {
+									"name": "abPriceRatePos",
+									"type": "Boolean",
+									"physicalType": "bit"
+								},
+								"sink": {
+									"type": "String",
+									"physicalType": "String",
+									"ordinal": 199
+								}
+							}
+						],
+						"typeConversion": true,
+						"typeConversionSettings": {
+							"allowDataTruncation": true,
+							"treatBooleanAsNumber": false
+						}
+					}
+				},
+				"inputs": [
+					{
+						"referenceName": "SetSubj",
+						"type": "DatasetReference"
+					}
+				],
+				"outputs": [
+					{
+						"referenceName": "DelimitedText1",
+						"type": "DatasetReference"
+					}
+				]
+			}
+		],
+		"annotations": []
+	}
+}
